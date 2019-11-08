@@ -21,10 +21,10 @@ window.addEventListener ('load', function() {
         url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeSeries[i].poster_path
 
 
-        serie  =  `<li>`
+        serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeries[i].id}">`
         serie +=      `<img src='${url_imge}' alt="">`
         serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
-        serie +=   `</li>`
+        serie +=   `</li></a>`
         console.log(serie);
         sectionPopular.innerHTML += serie
 
