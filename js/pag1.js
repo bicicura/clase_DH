@@ -1,57 +1,108 @@
 window.addEventListener ('load', function() {
 
-  var seriesURL = 'https://api.themoviedb.org/3/tv/popular?api_key=b0f40cf877bd4ccb9f9f1975eb5ffa65&language=es-AR&page=1'
+  var popuURL = 'https://api.themoviedb.org/3/tv/popular?api_key=b0f40cf877bd4ccb9f9f1975eb5ffa65&language=es-AR&page=1'
+  var titulo = ""
 
-  fetch(seriesURL)
+  fetch(popuURL)
   .then(function(response) {
    return response.json()
   })
   .then(function(information) {
    console.log(information);
     var arrayDeSeries = information.results
-    // var titulo = ""
-    // var foto = ""
+    var titulo = ""
+    var url_imge = ""
+    var serie  =  ""
+    var sectionPopular = document.querySelector('.populares')
     for (var i = 0; i < arrayDeSeries.length; i++) {
 
-    titulo = arrayDeSeries[i].name
-    console.log(titulo);
-    foto = arrayDeSeries[i].poster_path
-    console.log(foto);
+        titulo = arrayDeSeries[i].name
 
-    // document.querySelector('h3.tit').innerHTML = titulo
-    // document.querySelector('img.poster').src = foto
-    ` <h3 class="tit">${titulo} </h3>
-      <img src="https://image.tmdb.org/t/p/original/${foto}" alt="" class="poster">
-    `
+        url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeSeries[i].poster_path
 
 
-    // var arrayDeSeries = information.results;
-    //
-    // for (var serie of arrayDeSeries) {
-    //     seriesURL.innerHTML += `
-    //       <li>
-    //         <a>${seriesURL.name}</a>
-    //         <div>
-    //           <img src="${seriesURL.poster_path}" alt="">
-    //         </div>
-    //       </li>
-    //     `
-    //
-    // }
+        serie  =  `<li>`
+        serie +=      `<img src='${url_imge}' alt="">`
+        serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
+        serie +=   `</li>`
+        console.log(serie);
+        sectionPopular.innerHTML += serie
+
+}})
+.catch(function(error) {
+  console.log("Error: " + error);
+})
+
+
+
+
+var topURL = 'https://api.themoviedb.org/3/tv/top_rated?api_key=b0f40cf877bd4ccb9f9f1975eb5ffa65&language=es-AR&page=1'
+
+fetch(topURL)
+.then(function(response) {
+ return response.json()
+})
+.then(function(information) {
+ console.log(information);
+  var sectionTop = document.querySelector('.top')
+  var arrayDeSeriesTop = information.results
+  for (var i = 0; i < arrayDeSeriesTop.length; i++) {
+
+     titulo = arrayDeSeriesTop[i].name
+
+     url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeSeriesTop[i].poster_path
+
+
+     serie  =  `<li>`
+     serie +=      `<img src='${url_imge}' alt="">`
+     serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
+     serie +=   `</li>`
+     console.log(serie);
+     sectionTop.innerHTML += serie
 
 }
 
 
+})
+.catch(function(error) {
+ console.log("Error: " + error);
+})
 
 
+var hoyURL = 'https://api.themoviedb.org/3/tv/airing_today?api_key=b0f40cf877bd4ccb9f9f1975eb5ffa65&language=es-AR&page=1'
+
+fetch(hoyURL)
+.then(function(response) {
+ return response.json()
+})
+.then(function(information) {
+ console.log(information);
+  var sectionHoy = document.querySelector('.hoy')
+  var arrayDeSeriesHoy = information.results
+  for (var i = 0; i < arrayDeSeriesHoy.length; i++) {
+
+     titulo = arrayDeSeriesHoy[i].name
+
+     url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeSeriesHoy[i].poster_path
 
 
+     serie  =  `<li>`
+     serie +=      `<img src='${url_imge}' alt="">`
+     serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
+     serie +=   `</li>`
+     console.log(serie);
+     sectionHoy.innerHTML += serie
 
+}
 
 
 })
-  .catch(function(error) {
-   console.log("Error: " + error);
-  })
+.catch(function(error) {
+ console.log("Error: " + error);
+})
+
+
+
+
 
 })
