@@ -19,9 +19,9 @@ fetch(URL)
   var titulo = objetoSerie.name
   lis = `<h2 class="">${titulo}</h2>`
   var arrayGenero = objetoSerie.genres
-  var generos = "Géneros: "
+  var generos = " "
   for (var i = 0; i < arrayGenero.length; i++) {
-    generos += arrayGenero[i].name + ", "
+    generos += '<a href="pagina3.html?idDeSerie='+arrayGenero[i].id+'&titulo="'+titulo+'>'+ arrayGenero[i].name + '</a>' + ", "
     // pensar como hacer para validar si es el ultimo elemento, si esto se cumple no poner ", "
   }
   lis += '<h2 class="genero">Generos: '+generos+'</h2>'
