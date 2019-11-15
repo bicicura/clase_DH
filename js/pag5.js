@@ -21,8 +21,8 @@ fetch(URL)
   var arrayGenero = objetoSerie.genres
   var generos = " "
   for (var i = 0; i < arrayGenero.length; i++) {
-    generos += '<a href="pagina3.html?idDeSerie='+arrayGenero[i].id+'&titulo="'+titulo+'>'+ arrayGenero[i].name + '</a>' + ", "
-    if (true) { 
+    generos += '<a href="pagina3.html?idDeGenero='+arrayGenero[i].id+'&nombreDeGenero="'+arrayGenero.genres+'>'+ arrayGenero[i].name + '</a>' + ", "
+    if (true) {
 
     }// pensar como hacer para validar si es el ultimo elemento, si esto se cumple no poner ", "
   }
