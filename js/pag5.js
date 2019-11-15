@@ -22,7 +22,9 @@ fetch(URL)
   var generos = " "
   for (var i = 0; i < arrayGenero.length; i++) {
     generos += '<a href="pagina3.html?idDeSerie='+arrayGenero[i].id+'&titulo="'+titulo+'>'+ arrayGenero[i].name + '</a>' + ", "
-    // pensar como hacer para validar si es el ultimo elemento, si esto se cumple no poner ", "
+    if (true) { 
+
+    }// pensar como hacer para validar si es el ultimo elemento, si esto se cumple no poner ", "
   }
   lis += '<h2 class="genero">Generos: '+generos+'</h2>'
   var sinopsis = objetoSerie.overview

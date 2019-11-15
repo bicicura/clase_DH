@@ -53,10 +53,10 @@ fetch(topURL)
      url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeSeriesTop[i].poster_path
 
 
-     serie  =  `<li>`
+     serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeriesTop[i].id}">`
      serie +=      `<img src='${url_imge}' alt="">`
      serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
-     serie +=   `</li>`
+     serie +=   `</li></a>`
      console.log(serie);
      sectionTop.innerHTML += serie
 
@@ -86,10 +86,10 @@ fetch(hoyURL)
      url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeSeriesHoy[i].poster_path
 
 
-     serie  =  `<li>`
+     serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeriesHoy[i].id}">`
      serie +=      `<img src='${url_imge}' alt="">`
      serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
-     serie +=   `</li>`
+     serie +=   `</li></a>`
      console.log(serie);
      sectionHoy.innerHTML += serie
 
