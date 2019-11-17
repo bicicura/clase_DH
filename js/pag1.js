@@ -24,7 +24,7 @@ window.addEventListener ('load', function() {
         serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeries[i].id}">`
         serie +=      `<img src='${url_imge}' alt="">`
         serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
-        serie +=   `</li></a>`
+        serie +=   `</a></li>`
         console.log(serie);
         sectionPopular.innerHTML += serie
 
