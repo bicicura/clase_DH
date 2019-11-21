@@ -17,7 +17,7 @@ fetch(URL)
   console.log(objetoRespuesta);
   var objetoSerie = objetoRespuesta;
   var titulo = objetoSerie.name
-  lis = `<h2 class="">${titulo}</h2>`
+  lis = `<div class="titulo"><h2>${titulo}</h2></div>`
   var arrayGenero = objetoSerie.genres
   var generos = " "
   for (var i = 0; i < arrayGenero.length; i++) {
@@ -31,7 +31,7 @@ fetch(URL)
   var sinopsis = objetoSerie.overview
   lis += '<li>'
   lis +=    '<h2>Sinopsis:</h2>'
-  lis +=    '<div>'
+  lis +=    '<div class= "sinopsis">'
   lis +=        '<p>'+sinopsis+'</p>'
   lis +=    '</div>'
   lis += '</li>'
@@ -39,7 +39,7 @@ fetch(URL)
   var fechaEstreno = objetoSerie.first_air_date
   lis += '<h2 class="genero">Fecha de estreno: '+fechaEstreno+'</h2>'
   var url_imge = "https://image.tmdb.org/t/p/original/" + objetoSerie.poster_path
-  lis += '<img src="'+url_imge+'">'
+  lis += '<img class= "img1" src="'+url_imge+'">'
   // trailer leer
 
   ulSerie.innerHTML = lis
@@ -57,7 +57,7 @@ fetch(recomendaciones)
 })
 .then(function(informacion){
   console.log(informacion);
-  
+
 })
 .catch(function (error) {
     console.log('Error: ' + error);
