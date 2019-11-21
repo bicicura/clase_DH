@@ -28,8 +28,8 @@ console.log(nombreDeGenero);
 
 
         seriesxg = `<li><a href="pagina5.html?idDeSerie=${arrayDeSeriesPorGenero[i].id}">`
-        seriesxg +=      `<img src='${url_imge}' alt="">`
-        seriesxg +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
+        seriesxg +=      `<img class="poster" src='${url_imge}' alt="">`
+        seriesxg +=      `<div class="uk-position-center uk-panel titulo"><h2>${titulo}</h2></div>`
         seriesxg +=   `</li></a>`
 
         sxGeneros.innerHTML += seriesxg
