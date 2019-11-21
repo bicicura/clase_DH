@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Generos</title>
+    <title></title>
     <link rel="stylesheet" href="css/headerYfooter.css">
     <link rel="stylesheet" href="css/uikit.min.css" />
-    <link rel="stylesheet" href="css/pg2.css" />
+    <!-- <link rel="stylesheet" href="css/pg6.css" /> -->
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
   </head>
@@ -13,7 +13,7 @@
     <header>
       <div class="uk-navbar-container" uk-navbar>
         <div class="uk-navbar-left navegador">
-          <img src="imgs/dvd.png" alt="" class="logo">
+          <!-- <img src="imgs/dvd.png" alt="" class="logo"> -->
           <a href="" class="uk-navbar-item uk-logo"></a>
           <ul class="uk-navbar-nav"><a class= "botonesHeader" href="pagina1.html">Inicio</a></ul>
           <ul class="uk-navbar-nav"><a class= "botonesHeader" href="pagina2.html">Generos</a></ul>
@@ -27,14 +27,18 @@
       </div>
     </header>
 
-    <ul class="listado"></ul>
+    <form class="pag-avanzada" action="index.html" method="post">
 
-    <footer>
-      <h3>Agustin Lalia & Franco La Mattina</h3>
-      <img src="imgs/dvd.png" alt="" class="footerlogo">
-      <img src="fotos\TMDB.png" alt="" class= footerimg>
-    </footer>
+      <select class="list-gen" name="">
+      </select>
 
-    <script type="text/javascript" src="js/pag2.js">  </script>
+      <select class="list-gen2" name="">
+      </select>
+      <button type="submit" name="button">Buscar</button>
+    </form>
+
+
+
+  <script type="text/javascript" src="js/pag6.js">      </script>
   </body>
 </html>

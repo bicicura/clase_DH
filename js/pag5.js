@@ -57,8 +57,25 @@ fetch(recomendaciones)
 })
 .then(function(informacion){
   console.log(informacion);
+  var arrayDeSeries = informacion.results
+  var titulo = ""
+  var url_imge = ""
+  var serie  =  ""
+  var sectionPopular = document.querySelector('.recomendados')
+  for (var i = 0; i < arrayDeSeries.length; i++) {
 
-})
+      titulo = arrayDeSeries[i].name
+
+      url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeSeries[i].poster_path
+
+
+      serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeries[i].id}">`
+      serie +=      `<img src='${url_imge}' alt="">`
+      serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
+      serie +=   `</a></li>`
+      console.log(serie);
+      sectionPopular.innerHTML += serie
+}})
 .catch(function (error) {
     console.log('Error: ' + error);
 })
