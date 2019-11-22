@@ -1,11 +1,12 @@
 body {
-  background-color: #1f5f8b;
+  background-color: #00909e;
   font-family: helvetica;
+  color: black;
 }
 
 .navegador {
 width: 100%;
-background-color: #253b6e;
+background-color: #1b2a49;
 padding-top: 5px;
 padding-left: 25px;
 padding-bottom: 5px;
@@ -27,12 +28,18 @@ padding-bottom: 5px;
   }
 
 .titulo {
-border: solid 5px green;
 width: 100%;
-font-size: 40px;
+font-size: 45px;
 text-align: center;
 margin-top: 25px;
   }
+
+.recomendaciones {
+text-align: center;
+font-size: 30px;
+font-weight: bold;
+color: black
+}
 
 ul {
 list-style-type: none;

@@ -17,7 +17,7 @@ fetch(URL)
   console.log(objetoRespuesta);
   var objetoSerie = objetoRespuesta;
   var titulo = objetoSerie.name
-  lis = `<div class="titulo"><h2>${titulo}</h2></div>`
+  lis = `<div class="titulo"><h2 class="titulo">${titulo}</h2></div>`
   var arrayGenero = objetoSerie.genres
   var generos = " "
   for (var i = 0; i < arrayGenero.length; i++) {
@@ -70,8 +70,8 @@ fetch(recomendaciones)
 
 
       serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeries[i].id}">`
-      serie +=      `<img src='${url_imge}' alt="">`
-      serie +=      `<div class="uk-position-down uk-panel"><h2>${titulo}</h2></div>`
+      serie +=      `<img clas="poster" src='${url_imge}' alt="">`
+      serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
       serie +=   `</a></li>`
       console.log(serie);
       sectionPopular.innerHTML += serie

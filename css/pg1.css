@@ -25,6 +25,18 @@ border-radius: 15px 50px 30px 5px;
 padding: 5px
 }
 
+.titulosection {
+text-align: center;
+font-size: 30px;
+color: black;
+font-weight: bold;
+}
+
+.poster {
+border-radius: 15%;
+∑
+}
+
 .populares {
 display: flex;
 width: 80%;
@@ -63,25 +75,6 @@ align-items: center;
 }
 
 .titulo {
-width: 95%;
-background-color: rgba(111, 194, 235, 1);
-border-radius: 15%;
+text-align: center;
 
   }
-
-  .sillon-card {
-  margin-top: 20px;
-  opacity: 0;
-  width: 30%;
-}
-.sillon-card img {
-  display:block;
-  margin: auto;
-  width: 60%;
-}
-
-.sillon-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
