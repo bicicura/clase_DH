@@ -12,7 +12,6 @@ window.addEventListener ('load', function() {
   	for (var genero of informacion.genres) {
 			list.innerHTML += `<div class="contenedor"><li><a href="pagina3.html?idDeGenero=${genero.id}&nombreDeGenero=${genero.name}">` + genero.name + `</a></li></div>`;
 		}
-    // console.log(informacion);
 	})
 	.catch(function (error) {
 		console.log("Error: " + error);
@@ -30,8 +29,6 @@ window.addEventListener ('load', function() {
       pos: 'top-right',
       timeout: 3000
   });
-  }else {
-
   }
   }
 })

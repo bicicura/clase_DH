@@ -86,6 +86,7 @@ fetch(hoyURL)
      url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeSeriesHoy[i].poster_path
 
 
+
      serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeriesHoy[i].id}">`
      serie +=      `<img class="poster" src='${url_imge}' alt="">`
      serie +=      `<div class="uk-position-center uk-panel"><h2 class="titulo">${titulo}</h2></div>`
@@ -107,16 +108,14 @@ document.querySelector("form.buscar").onsubmit = function(e) {
   var busco = document.querySelector('.busqueda').value;
   console.log(busco);
 // var buscadorInput = document.querySelector("input")
-if (busco.length <= 3) {
+if (busco.length < 3) {
   e.preventDefault()
   UIkit.notification({
-    message: 'Ingrese mas de tres caracteres',
+    message: 'Ingrese tres o mas caracteres',
     status: 'warning',
     pos: 'top-right',
     timeout: 3000
 });
-}else {
-
 }
 }
 
