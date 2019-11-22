@@ -1,6 +1,6 @@
 body {
   background-color: #1f5f8b;
-  font-family: helvetica; 
+  font-family: helvetica;
 }
 
 .navegador {
@@ -27,6 +27,7 @@ padding-bottom: 5px;
   }
 
 .titulo {
+border: solid 5px green;
 width: 100%;
 font-size: 40px;
 text-align: center;
@@ -43,9 +44,9 @@ font-weight: bold;
 
 .sinopsis {
 width: 95%;
-background-color: #d2ecf9;
-padding: 5px;
-border-radius: 5%;
+background-color: rgba(210, 236, 249, 0.5);
+padding: 1%;
+border-radius: 28px 28px 28px 28px;;
 }
 
 footer {
