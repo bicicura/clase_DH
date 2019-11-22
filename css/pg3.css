@@ -33,6 +33,11 @@ margin-bottom: 45px;
 .poster {
 border-radius: 15%;
   }
+.poster:hover {
+  opacity: 0.5;
+  transition: 1s;
+  filter: alpha(opacity=100);
+  }
 
 h2 {
 font-weight: bold;

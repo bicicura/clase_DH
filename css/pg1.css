@@ -30,6 +30,12 @@ display: flex;
 width: 80%;
 }
 
+.poster:hover {
+    opacity: 0.5;
+    transition: 1s;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+  }
+
 .xpuntaje {
 width: 80%;
 }
