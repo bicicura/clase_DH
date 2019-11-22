@@ -25,7 +25,7 @@ fetch(url)
 
   serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeResultados[i].id}">`
   serie +=      `<img src='${url_imge}' alt="">`
-  serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
+  serie +=      `<div class="uk-position-down uk-panel"><h2>${titulo}</h2></div>`
   serie +=   `</a></li>`
   console.log(serie);
   sectionResultados.innerHTML += serie

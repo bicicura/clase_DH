@@ -23,7 +23,7 @@ window.addEventListener ('load', function() {
 
         serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeries[i].id}">`
         serie +=      `<img src='${url_imge}' alt="">`
-        serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
+        serie +=      `<div class="uk-position-down uk-panel"><h2>${titulo}</h2></div>`
         serie +=   `</a></li>`
         console.log(serie);
         sectionPopular.innerHTML += serie
@@ -55,7 +55,7 @@ fetch(topURL)
 
      serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeriesTop[i].id}">`
      serie +=      `<img src='${url_imge}' alt="">`
-     serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
+     serie +=      `<div class="uk-position-down uk-panel"><h2>${titulo}</h2></div>`
      serie +=   `</li></a>`
      console.log(serie);
      sectionTop.innerHTML += serie
@@ -87,8 +87,8 @@ fetch(hoyURL)
 
 
      serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeriesHoy[i].id}">`
-     serie +=      `<img src='${url_imge}' alt="">`
-     serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
+     serie +=      `<div class="sillon-container"><div><img src='${url_imge}' alt=""></div></div>`
+     serie +=      `<div class="uk-position-down uk-panel"><h2>${titulo}</h2></div>`
      serie +=   `</li></a>`
      console.log(serie);
      sectionHoy.innerHTML += serie
@@ -103,6 +103,21 @@ fetch(hoyURL)
 
 
 
+document.querySelector("form.buscar").onsubmit = function(e) {
+  var busco = document.querySelector('.busqueda').value;
+  console.log(busco);
+// var buscadorInput = document.querySelector("input")
+if (busco.length <= 3) {
+  e.preventDefault()
+  UIkit.notification({
+    message: 'Ingrese mas de tres caracteres',
+    status: 'warning',
+    pos: 'top-right',
+    timeout: 3000
+});
+}else {
 
+}
+}
 
 })

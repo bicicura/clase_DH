@@ -18,4 +18,20 @@ window.addEventListener ('load', function() {
 		console.log("Error: " + error);
 	})
 
+  document.querySelector("form.buscar").onsubmit = function(e) {
+    var busco = document.querySelector('.busqueda').value;
+    console.log(busco);
+  // var buscadorInput = document.querySelector("input")
+  if (busco.length <= 3) {
+    e.preventDefault()
+    UIkit.notification({
+      message: 'Ingrese mas de tres caracteres',
+      status: 'warning',
+      pos: 'top-right',
+      timeout: 3000
+  });
+  }else {
+
+  }
+  }
 })

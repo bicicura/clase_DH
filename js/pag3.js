@@ -29,7 +29,7 @@ console.log(nombreDeGenero);
 
         seriesxg = `<li><a href="pagina5.html?idDeSerie=${arrayDeSeriesPorGenero[i].id}">`
         seriesxg +=      `<img class="poster" src='${url_imge}' alt="">`
-        seriesxg +=      `<div class="uk-position-center uk-panel titulo"><h2>${titulo}</h2></div>`
+        seriesxg +=      `<div class="uk-position-down uk-panel titulo"><h2>${titulo}</h2></div>`
         seriesxg +=   `</li></a>`
 
         sxGeneros.innerHTML += seriesxg
@@ -41,4 +41,21 @@ console.log(nombreDeGenero);
   .catch(function (error) {
     console.log('Error: ' + error);
   })
+
+  document.querySelector("form.buscar").onsubmit = function(e) {
+    var busco = document.querySelector('.busqueda').value;
+    console.log(busco);
+  // var buscadorInput = document.querySelector("input")
+  if (busco.length <= 3) {
+    e.preventDefault()
+    UIkit.notification({
+      message: 'Ingrese mas de tres caracteres',
+      status: 'warning',
+      pos: 'top-right',
+      timeout: 3000
+  });
+  }else {
+
+  }
+  }
 })

@@ -27,15 +27,15 @@ padding: 5px
 
 .populares {
 display: flex;
-width: 1000px;
+width: 80%;
 }
 
 .xpuntaje {
-width: 1000px;
+width: 80%;
 }
 
 .aire {
-width: 1000px;
+width: 80%;
 }
 
 footer {
@@ -54,4 +54,28 @@ align-items: center;
   width: 15%;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.titulo {
+width: 95%;
+background-color: rgba(111, 194, 235, 1);
+border-radius: 15%;
+
+  }
+
+  .sillon-card {
+  margin-top: 20px;
+  opacity: 0;
+  width: 30%;
+}
+.sillon-card img {
+  display:block;
+  margin: auto;
+  width: 60%;
+}
+
+.sillon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
