@@ -1,0 +1,45 @@
+- Descargue de GitHub el proyecto de Prog I
+
+- Paralelamente cree un proyecto nuevo utilizando Express Generator, proyecto llamado Proyecto Integrador "npx express-generator --ejs ProyectoIntegrador"
+
+- Utilice el comando "npm install" para instalar dependencias
+
+- Instale "npm install sequelize" y "npm install mysql2"
+
+- Cree el file ".sequelizerc" y agregue "const path = require('path');
+module.exports = {
+	config: path.resolve('./database/config', 'config.js'),
+	'models-path': path.resolve('./database/models'),
+	'seeders-path': path.resolve('./database/seeders'),
+	'migrations-path': path.resolve('./database/migrations'),
+};" Lo guarde, cerre y tire en consola el comando "npx sequelize-cli init"
+
+- Fui a la carpeta DATABASE, abri el file CONFIG y ahi puse al principio del codigo "module.expors =" Esto es para vincularse a la base de dato. En "database" puse : "movies_db_2020"
+
+- Copie todos los HTMLS viejos a la carpeta VIEWS del proyecto nuevo. Le cambie todas sus extensiones .html a .ejs
+
+- Copie todos los CSS viejos a la carpeta PUBLIC/STYLESHEETS
+
+- Entre en los nuevos .EJS y cambie el HREF de las etiquetas link. La modifique para la nueva ubicacion. Ejemplo "/stylesheets/pg6.css"
+
+- Copie los .JS viejos a la carpeta JAVASCRIPTS dentro de la carpeta PUBLIC
+
+- Cambie en los .EJS todos los SRC de la etiqueta SCRIPT. Ejemplo "/javascripts/pag3.js"
+
+- Copie todas las imagenes y las pegue en la carpeta IMAGES dentro de PUBLIC
+
+- Cambie todos los SRC de las etiquetas IMG por el correspondiente. Por ejemplo "/images/logo.png"
+
+- Agregue en ROUTES una nueva ruta para PAGINA1
+
+- Cree la carpeta CONTROLLERS en la raiz del proyecto y cree dentro de esta el archivo PAGINA1SCONTROLLER.JS. Aca use el metodo res.render('pagina1') para usar la vista del ejs.
+
+- En APP.js agregue el controller creando el require y usando APP.use. Linea 9 y 25 del codigo 
+
+- En PACKAGE.JASON cambie y puse en START "npx nodemon"
+
+- Adentro de la carpeta DATABASES y dentro de MODELS cree el archivo MOVIE y ahi estoy haciendo el modelo, utilizando los datos de la base de datos MOVIES_DB_2020 (HAY QUE CREAR Y CAMBIAR POR UNA BASE DE DATOS NUESTRA)
+
+
+
+
