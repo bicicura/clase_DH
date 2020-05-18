@@ -1,5 +1,5 @@
 module.exports = {
     index: (req, res) => {
-        return res.render('pagina2')
+        return res.render('genres')
     }
 };
