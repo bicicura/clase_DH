@@ -22,9 +22,9 @@ fetch(URL)
   var generos = " "
   for (var i = 0; i < arrayGenero.length; i++) {
     if (arrayGenero.length-1 === i) {
-            generos += '<a href="pagina3.html?idDeGenero='+arrayGenero[i].id+'&nombreDeGenero='+arrayGenero[i].name+'">'+ arrayGenero[i].name + '</a>'
+            generos += '<a href="/seriesXgenre?idDeGenero='+arrayGenero[i].id+'&nombreDeGenero='+arrayGenero[i].name+'">'+ arrayGenero[i].name + '</a>'
     }else {
-      generos += '<a href="pagina3.html?idDeGenero='+arrayGenero[i].id+'&nombreDeGenero='+arrayGenero[i].name+'">'+ arrayGenero[i].name + '</a>' + ", "
+      generos += '<a href="/seriesXgenre?idDeGenero='+arrayGenero[i].id+'&nombreDeGenero='+arrayGenero[i].name+'">'+ arrayGenero[i].name + '</a>' + ", "
     }
   }
   lis += '<h2 class="genero">Generos: '+generos+'</h2>'
@@ -69,7 +69,7 @@ fetch(recomendaciones)
       url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeSeries[i].poster_path
 
 
-      serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeries[i].id}">`
+      serie  =  `<li><a href="detail?idDeSerie=${arrayDeSeries[i].id}">`
       serie +=      `<img clas="poster" src='${url_imge}' alt="">`
       serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
       serie +=   `</a></li>`

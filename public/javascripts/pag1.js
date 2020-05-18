@@ -21,7 +21,7 @@ window.addEventListener ('load', function() {
         url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeSeries[i].poster_path
 
 
-        serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeries[i].id}">`
+        serie  =  `<li><a href="/detail?idDeSerie=${arrayDeSeries[i].id}">`
         serie +=      `<img class="poster" src='${url_imge}' alt="">`
         serie +=      `<div class="uk-position-center uk-panel"><h2 class="titulo">${titulo}</h2></div>`
         serie +=   `</a></li>`
@@ -53,7 +53,7 @@ fetch(topURL)
      url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeSeriesTop[i].poster_path
 
 
-     serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeriesTop[i].id}">`
+     serie  =  `<li><a href="/detail?idDeSerie=${arrayDeSeriesTop[i].id}">`
      serie +=      `<img class="poster" src='${url_imge}' alt="">`
      serie +=      `<div class="uk-position-center uk-panel"><h2 class="titulo">${titulo}</h2></div>`
      serie +=   `</li></a>`
@@ -87,7 +87,7 @@ fetch(hoyURL)
 
 
 
-     serie  =  `<li><a href="pagina5.html?idDeSerie=${arrayDeSeriesHoy[i].id}">`
+     serie  =  `<li><a href="/detail?idDeSerie=${arrayDeSeriesHoy[i].id}">`
      serie +=      `<img class="poster" src='${url_imge}' alt="">`
      serie +=      `<div class="uk-position-center uk-panel"><h2 class="titulo">${titulo}</h2></div>`
      serie +=   `</li></a>`

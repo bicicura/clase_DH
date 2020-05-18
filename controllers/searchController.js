@@ -1,5 +1,5 @@
 module.exports = {
     index: (req, res) => {
-        return res.render('pagina3')
+        return res.render('search')
     },
 };

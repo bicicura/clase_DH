@@ -23,7 +23,7 @@ fetch(url)
 
   url_imge = "https://image.tmdb.org/t/p/original/" + arrayDeResultados[i].poster_path
 
-  serie  =  `<li class"poster"><a href="pagina5.html?idDeSerie=${arrayDeResultados[i].id}">`
+  serie  =  `<li class"poster"><a href="/detail?idDeSerie=${arrayDeResultados[i].id}">`
   serie +=      `<img class="resultadoimg" src='${url_imge}' alt="">`
   serie +=      `<div class="uk-position-center uk-panel"><h2>${titulo}</h2></div>`
   serie +=   `</a></li>`

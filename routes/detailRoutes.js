@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const controller = require('../controllers/pagina5Controller')
+const controller = require('../controllers/detailController')
 
 router.get('/', controller.index)
 
