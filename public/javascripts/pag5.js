@@ -3,6 +3,8 @@ window.addEventListener('load',function(){
 var queryStringObject = new URLSearchParams(window.location.search)
 var idDeSerie = queryStringObject.get("idDeSerie")
 console.log(idDeSerie);
+var campoSerieID = document.querySelector('#serie_id');
+campoSerieID.value = idDeSerie;
 var URL = 'https://api.themoviedb.org/3/tv/'+idDeSerie+'?api_key=b0f40cf877bd4ccb9f9f1975eb5ffa65&language=es-AR';
 
 var ulSerie = document.querySelector (".detalleSerie")

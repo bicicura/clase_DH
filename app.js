@@ -10,6 +10,7 @@ const seriesXgenreRouter = require('./routes/seriesXgenreRoutes');
 const searchRouter = require('./routes/searchRoutes');
 const detailRouter = require('./routes/detailRoutes');
 const usuariosRouter = require('./routes/usuariosRoutes');
+const reviewsRouter = require('./routes/reviewsRoutes');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use('/seriesXgenre', seriesXgenreRouter);
 app.use('/search', searchRouter);
 app.use('/detail', detailRouter);
 app.use('/usuarios', usuariosRouter);
+app.use('/reviews', reviewsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
