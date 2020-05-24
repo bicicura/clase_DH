@@ -77,3 +77,30 @@ align-items: center;
 width: 420px;
 border-radius: 15%
 }
+
+.reviewFormDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.reviewForm {
+ max-width: 500px;
+ margin: 2rem, auto;
+ align-items: center;
+ text-align: center;
+ background-color: #46DDEB;
+ border-radius: 10px 10px 10px 10px;
+ padding: 15px;
+}
+
+.InputC {
+  border-radius: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+label[for="review"] {
+font-weight: bold;
+}
+

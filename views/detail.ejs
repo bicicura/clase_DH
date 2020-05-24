@@ -31,20 +31,33 @@
     </ul>
     <br>
 
-    <form action="/reviews/store" method="post">
-      <label>Email:</label> <input type="email" name="email">
+<div class="reviewFormDiv">
+  
+    <form action="/reviews/store" method="post" class="reviewForm">
+      <label for="review">Email:</label>
       <br>
-      <label>Contraseña:</label> <input type="text" name="password">
+       <input type="email" name="email" class="InputC" placeholder="Email...">
       <br>
-      <label>Escribe tu reseña:</label> <input type="text" name="text_review">
+      <label for="review">Contraseña:</label>
       <br>
-      <label>Puntaje:</label> <input type="text" name="rating">
+       <input type="text" name="password" class="InputC" placeholder="Contraseña...">
       <br>
-      <label>usuario_id:</label> <input type="text" name="user_id" value="1">
-      <input type="hidden" name="serie_id" id="serie_id">
+      <label for="review">Escribe tu reseña:</label> 
       <br>
-      <button type="submit">Enviar!</button>
-  </form>
+      <input type="text" name="text_review" class="InputC" placeholder="Tu reseña..." style="height:200px">
+      <br>
+      <label for="review">Puntaje:</label> 
+      <br>
+      <input type="text" name="rating" class="InputC" placeholder="Puntaje...">
+      <br>
+      <label for="review">usuario_id:</label>
+      <br>
+      <input type="text" name="user_id" value="1" class="InputC" placeholder="usuario_id...">
+      <br>
+      <input type="hidden" name="serie_id" id="serie_id" placeholder="">
+      <br>
+      <button type="submit" class="buttonC">Enviar!</button>
+  </form></div>
 
   <br>
 
