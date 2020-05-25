@@ -19,5 +19,21 @@ module.exports = {
             .then(SavedUser => {return res.send('Felicitaciones ' + req.body.name + ' te has registrado exitosamente!'); })
             .catch(error => {res.send(error);
             })
-    },    
+    },
+    search: (req, res) =>
+    { DB.Usuarios 
+    .findAll({
+        order: [
+            ['name','ASC']
+        ]
+    })
+    .then(usuarios => {
+        return res.render ('searchUser', {listaUsuarios: usuarios
+        });
+    })
+    .catch(error => {
+        return res.send(error);
+    })
+},
+
 }
