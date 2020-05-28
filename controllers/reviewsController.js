@@ -14,7 +14,6 @@ module.exports = {
     create: (req, res) => {res.render('detail')},
 
     store: (req, res) => {
-        return res.send(req.body);
         DB.Reviews
             .create(req.body)
             .then(SavedReview => {return res.send('Felicitaciones hemos registrado exitosamente tu reseña'); })

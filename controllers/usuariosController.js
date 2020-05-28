@@ -11,6 +11,7 @@ module.exports = {
             res.send(error);
         })
     },
+
     create: (req, res) => {res.render('registerForm')},
 
     store: (req, res) => {
@@ -20,6 +21,7 @@ module.exports = {
             .catch(error => {res.send(error);
             })
     },
+
     search: (req, res) =>
     { DB.Usuarios 
     .findAll({

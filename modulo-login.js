@@ -13,7 +13,7 @@ let moduloLogin = {
     },
 
     buscarPorEmail: function (email){
-        return DB.Usuario.findOne({
+        return DB.Usuarios.findOne({
             where: {
                 email:email
             }
