@@ -4,29 +4,6 @@ body {
   color: black;
 }
 
-.navegador {
-width: 100%;
-background-color: #1b2a49;
-padding-top: 5px;
-padding-left: 25px;
-padding-bottom: 5px;
-  }
-
-.logo {
-    width: 75px;
-    margin-left: 45px
-  }
-
-  .botonesHeader {
-  margin-right: 10px;
-  font-size: 30px;
-  font-family: sans-serif;
-  font-weight: bold;
-  background-color: black;
-  border-radius: 15px 50px 30px 5px;
-  padding: 5px
-  }
-
 .titulo {
 width: 100%;
 font-size: 45px;
@@ -56,51 +33,21 @@ padding: 1%;
 border-radius: 28px 28px 28px 28px;;
 }
 
-footer {
-background-color: #d2ecf9;
-display: flex;
-justify-content: space-around;
-align-items: center;
-}
-
-.footerlogo {
-    width: 100px;
-}
-
-.footerimg {
-    width: 15%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
   .img1 {
 width: 420px;
 border-radius: 15%
 }
 
-.reviewFormDiv {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-}
-
-.reviewForm {
- max-width: 500px;
- margin: 2rem, auto;
- align-items: center;
- text-align: center;
- background-color: #46DDEB;
- border-radius: 10px 10px 10px 10px;
- padding: 15px;
-}
-
-.InputC {
-  border-radius: 10px 10px 10px 10px;
+.formContainer {
   text-align: center;
 }
 
-label[for="review"] {
-font-weight: bold;
+.reviewFormDiv {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  border-radius: 5px 5px 5px 5px;
+  background-color: salmon;
+  width: 600px;
 }
-

@@ -11,34 +11,48 @@
 
     </ul>
     <br>
-
-<div class="reviewFormDiv">
-  
-    <form action="/reviews/store" method="post" class="reviewForm">
-      <label for="review">Email:</label>
-      <br>
-       <input type="email" name="email" class="InputC" placeholder="Email...">
-      <br>
-      <label for="review">Contraseña:</label>
-      <br>
-       <input type="text" name="password" class="InputC" placeholder="Contraseña...">
-      <br>
-      <label for="review">Escribe tu reseña:</label> 
-      <br>
-      <input type="text" name="text_review" class="InputC" placeholder="Tu reseña..." style="height:200px">
-      <br>
-      <label for="review">Puntaje:</label> 
-      <br>
-      <input type="text" name="rating" class="InputC" placeholder="Puntaje...">
-      <br>
-      <label for="review">usuario_id:</label>
-      <br>
-      <input type="text" name="user_id" value="1" class="InputC" placeholder="usuario_id...">
-      <br>
+<div class="formContainer">
+  <div class="reviewFormDiv">
+    <form action="/reviews/store" method="post">
       <input type="hidden" name="serie_id" id="serie_id">
-      <br>
-      <button type="submit" class="buttonC">Enviar!</button>
-  </form></div>
+      <fieldset class="uk-fieldset">
+    
+          <legend class="uk-legend">Dejanos tu reseña!</legend>
+    
+          <div class="uk-margin">
+            <div class="uk-inline">
+              <span class="uk-form-icon" uk-icon="icon: user"></span>
+            <input class="uk-input uk-input uk-form-width-large" type="email" placeholder="email" name="email">
+            </div>
+          </div>
+  
+          <div>
+            <div class="uk-inline">
+              <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+            <input class="uk-input uk-input uk-form-width-large" type="text" placeholder="contraseña" name="password">
+            </div>
+          </div>
+    
+          <div class="uk-margin">
+              <textarea class="uk-textarea" rows="5" placeholder="Escribe tu reseña aqui" name="text_review"></textarea>
+        </div>
+    
+        <div class="uk-margin">
+            <select class="uk-select" name="rate">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+            </select>
+        </div>
+    
+        <div class="uk-margin">
+          <input class="uk-input uk-input uk-form-width-large" type="text" placeholder="user_id" name="user_id" value="1">
+        </div>
+  
+        <button type="submit" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Enviar!</button>
+    
+      </fieldset>
+    </form>
+  </div>  
+</div>
 
   <br>
 
