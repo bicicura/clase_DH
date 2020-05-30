@@ -1,0 +1,25 @@
+body {
+  background-color: #cbf1f5;
+}
+
+li{
+margin-left: 25px;
+margin-bottom: 45px;
+  }
+
+.poster:hover {
+  opacity: 0.5;
+  transition: 1s;
+  filter: alpha(opacity=100);
+  }
+
+h2 {
+font-weight: bold;
+text-align: center;
+}
+
+.titulo {
+width: 95%;
+border-radius: 15%;
+
+  }

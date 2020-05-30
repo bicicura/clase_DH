@@ -1,5 +1,5 @@
 body {
-  background-color: #00909e;
+  background-color: #cbf1f5;
   font-family: helvetica;
   color: black;
 }
@@ -28,14 +28,13 @@ font-weight: bold;
 
 .sinopsis {
 width: 95%;
-background-color: rgba(210, 236, 249, 0.5);
+background-color: rgba(255, 230, 235, 0.8);
 padding: 1%;
 border-radius: 28px 28px 28px 28px;;
 }
 
   .img1 {
 width: 420px;
-border-radius: 15%
 }
 
 .formContainer {
@@ -48,6 +47,6 @@ border-radius: 15%
   align-content: center;
   align-items: center;
   border-radius: 5px 5px 5px 5px;
-  background-color: salmon;
+  background-color: #ffe6eb;
   width: 600px;
 }

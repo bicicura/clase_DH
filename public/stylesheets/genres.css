@@ -1,0 +1,17 @@
+body {
+  background-color: #cbf1f5;
+}
+
+ul {
+list-style-type: none;
+text-align: center;
+font-size: 30px;
+  }
+
+.contenedor {
+width: 95%;
+background-color: #a6e3e9;
+border-width: 2px 4px;
+border-radius: 40px;
+margin-bottom: 25px;
+  }
