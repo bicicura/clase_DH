@@ -7,8 +7,10 @@ router.get('/', controller.index);
 
 router.get('/create', controller.create);
 
+router.post('/store', controller.store);
+
 router.get('/search', controller.search);
 
-router.post('/store', controller.store);
+router.post('/', controller.search);
 
 module.exports = router;

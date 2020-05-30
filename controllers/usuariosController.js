@@ -1,4 +1,5 @@
 const DB = require('../database/models/');
+var OP = require('sequelize');
 
 module.exports = {
     index: (req, res) => {
@@ -25,14 +26,16 @@ module.exports = {
     search: (req, res) =>
     { DB.Usuarios 
     .findAll({
-        order: [
-            ['name','ASC']
-        ]
+        where: {
+            email: {[OP.like]:req.body.usuarios }}
     })
     .then(usuarios => {
-        return res.render ('searchUser', {listaUsuarios: usuarios
-        });
-    })
+        if (usuarios.length == 0)
+        return res.send ("No se encontraron usuarios");
+        else{res.render('searchUser', {usuarios: usuarios})}
+    }
+
+    ) 
     .catch(error => {
         return res.send(error);
     })

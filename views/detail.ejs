@@ -1,30 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="/stylesheets/uikit.min.css" />
-      <link rel="stylesheet" href="/stylesheets/pg5.css" />
-      <script src="/javascripts/uikit.min.js"></script>
-      <script src="/javascripts/uikit-icons.min.js"></script>
-    <title>Detalle</title>
-  </head>
-  <body>
-    <header>
-      <div class="uk-navbar-container" uk-navbar>
-        <div class="uk-navbar-left navegador">
-          <a href="/home"><img src="/images/dvd.png" alt="" class="logo"></a>
-          <a href="" class="uk-navbar-item uk-logo"></a>
-          <ul class="uk-navbar-nav"><a class= "botonesHeader" href="/home">Inicio</a></ul>
-          <ul class="uk-navbar-nav"><a class= "botonesHeader" href="/genres">Generos</a></ul>
-          <div class="uk-navbar-item">
-            <form class="buscar" action="/search" method="get">
-              <input class="uk-input uk-form-width-medium busqueda" type="text" name="q" value="" placeholder="Busqueda">
-            </form>
-          </div>
-        </div>
-      </div>
-    </header>
+<%- include partials/header %>
+
+    <link rel="stylesheet" href="/stylesheets/uikit.min.css" />
+    <link rel="stylesheet" href="/stylesheets/pg5.css" />
+    <script src="/javascripts/uikit.min.js"></script>
+    <script src="/javascripts/uikit-icons.min.js"></script>
+
+  <title>Detalle</title>
 
     <ul class="detalleSerie">
 
@@ -74,17 +55,8 @@
 
   <br>
 
-    <footer>
-      <h3>Agustin Lalia & Franco La Mattina</h3>
-      <a href="/home"><img src="/images/dvd.png" alt="" class="footerlogo"></a>
-      <img src="/images/TMDB.png" alt="" class= footerimg>
-
-    </footer>
-
-
+<%- include partials/footer %>
 
 <script type="text/javascript" src="/javascripts/pag5.js">
 
 </script>
-  </body>
-</html>

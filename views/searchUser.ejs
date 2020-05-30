@@ -6,15 +6,22 @@
     <title>Buscar Usuario</title>
 </head>
 <body>
-    <h1>Resultados</h1>
-    <ul>
-        <% for(let i = 0; i < listaUsuarios.length; i++ ) { %>
-            <li>
-                <%= listaUsuarios[i].name %>
-                <a href="/usuarios/detail/<%= listaUsuarios[i].id %> ">ver detalle </a>
-            </li> <% }%>
+<form action="/usuarios/search" method="post" class="formUsuarios"> 
+    <label for="user">BUSCADOR DE USUARIO</label>
+    <input type="user" id="user" name="user">
+    <button type="submit">Enviar!</button>
+</form>
 
-    </ul>
+<% if (usuarios) { %>
+    <% if (usuarios.length > 0) { %>
+    <% for (let i = 0; i < usuarios.length; i++) { %>
+        <%= usuarios[i].email %>
+    <%}%>
+    <%}else {%>
+    <p>No hay resultados</p>
+    <%}%>
+<%}%>
+
 </body>
 </html>
 
