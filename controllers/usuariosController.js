@@ -1,16 +1,9 @@
 const DB = require('../database/models/');
-var OP = require('sequelize');
+const op = DB.Sequelize.Op;
 
 module.exports = {
     index: (req, res) => {
-        DB.Usuarios
-        .findAll()
-        .then(usuarios => {
-            res.send(usuarios);
-        })
-        .catch(error => {
-            res.send(error);
-        })
+        return res.render('searchUser')
     },
 
     create: (req, res) => {res.render('registerForm')},
@@ -23,22 +16,24 @@ module.exports = {
             })
     },
 
-    search: (req, res) =>
-    { DB.Usuarios 
-    .findAll({
-        where: {
-            email: {[OP.like]:req.body.usuarios }}
-    })
-    .then(usuarios => {
-        if (usuarios.length == 0)
-        return res.send ("No se encontraron usuarios");
-        else{res.render('searchUser', {usuarios: usuarios})}
-    }
+    search: (req, res) => {
+        DB.Usuarios.findAll({
+            where: {
+                [op.or]: {
+                    email: {[op.like]: "%" + req.query.searchUser + "%"},
+                    name: {[op.like]: "%" + req.query.searchUser + "%"}
+                }
+            }
+        })
+        .then(resultado => {
+            res.render('resultadoSearchUser', {
+                usuarios: resultado
+            })
+        })
+        .catch(error => {
+            return res.send(error)
+        })
 
-    ) 
-    .catch(error => {
-        return res.send(error);
-    })
 },
 
     logUser: function (req, res) {

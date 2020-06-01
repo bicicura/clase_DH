@@ -1,21 +1,9 @@
 <%- include partials/header %>
 
-    <form action="/usuarios/search" method="post" class="formUsuarios"> 
+    <form action="/usuarios/search" method="GET" class="formUsuarios"> 
         <label for="user">BUSCADOR DE USUARIO</label>
-        <input type="user" id="user" name="user">
+        <input type="user" id="searchUser" name="searchUser">
         <button type="submit">Enviar!</button>
     </form>
 
-    <% if (usuarios) { %>
-        <% if (usuarios.length > 0) { %>
-            <% for (let i = 0; i < usuarios.length; i++) { %>
-            <%= usuarios[i].email %>
-    <%}%>
-    <%}else 
-    {%>
-    <p>No hay resultados</p>
-    <%}%>
-<%}%>
-
 <%- include partials/footer %>
-

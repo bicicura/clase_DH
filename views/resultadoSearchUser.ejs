@@ -1,0 +1,13 @@
+<%- include partials/header %> 
+<h1>Estos son los usuarios que encontre en tu busqueda</h1>
+<% if(usuarios.length != 0) { %>
+    <% for (let i=0; i < usuarios.length; i++) { %>
+
+        <%= usuarios[i].name %>
+
+        <% } %>
+<% } else { %>
+    <p>No encontre ningun usuario</p>
+   <% } %>
+
+<%- include partials/footer %>
