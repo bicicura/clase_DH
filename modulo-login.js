@@ -1,4 +1,5 @@
-let DB = require('./database/models')
+let DB = require('./database/models');
+let bcrypt = require ('bcryptjs');
 
 let moduloLogin = {
     chequearUsuario: function (email) {

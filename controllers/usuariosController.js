@@ -1,5 +1,6 @@
 const DB = require('../database/models/');
 const op = DB.Sequelize.Op;
+const moduloLogin = require('../modulo-login');
 
 module.exports = {
     index: (req, res) => {

@@ -17,7 +17,7 @@ router.get('/reviews', controller.logUser);
 
 router.post('/reviews', controller.confirmUser);
 
-router.get('reviews/:id', controller.getReviews);
+router.get('/reviews/:id', controller.getReviews);
 
 router.get('/reviews/edit/:id', controller.showEdit);
 
