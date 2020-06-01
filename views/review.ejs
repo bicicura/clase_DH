@@ -1,0 +1,27 @@
+<%- include partials/header %>
+
+<div>
+    <div>
+        <% if(resultado.length == 0) { %> 
+            <h1>You havent made any reviews yet...</h1>
+        <% } else { %>
+            <h1 class=""> <%= resultado[0].usuario.name %>'s reviews</h1>
+            <% for(let i = 0; i < resultado.length; i++) { %>
+                <div>
+                    <div>
+                        Score: <%= resultado[i].rating %></div>
+                        <div>
+                            <h4><%= resultado[i].review %></h4>
+                        </div>
+                        <div>
+                            <a href="/usuarios/reviews/edit<%= resultado[i].id %>">Edit</a>
+                            <a href="/detalle?idSerie=<%= resultado[i}.serie_id%> "> Go to movie</a>
+                            <a href="/usuarios/reviews/delete<%= resultado[i].id %>">Delete</a>
+                        </div>
+                </div>
+                <% } %>
+            <% } %>
+        </div>
+</div>
+
+<%- include partials/footer %>

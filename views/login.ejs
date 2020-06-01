@@ -1,0 +1,49 @@
+<%- include partials/header %>
+
+<div>
+<div>
+    <% if (tipo == "delete") { %>
+        <form id="formlogin" method="POST" 
+        action="/usuarios/reviews/delete/<%= deleteId %>">
+            <h1 style="color:white">Delete</h1>
+            <p>Confirm user to erase a review</p>
+                <div>
+                    <div>
+                        <span></span>
+                        <input type="text" name="email" id="email" placeholder="email...">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <span></span>
+                        <input type="password" name="password" id="pass" placeholder="password...">
+                    </div>
+                </div>
+
+                <button type="submit" name="button">Confirm</button>
+        </form>
+    <% } else { %> 
+        <form id="formlogin" method="POST" action="/usuarios/reviews">
+            <h1 style="color:white">Login!</h1>
+
+            <div>
+                <div>
+                    <span></span>
+                    <input type="text" name="email" id="email" placeholder="email...">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <span></span>
+                    <input type="password" name="password" id="pass" placeholder="password...">
+                </div>
+            </div>
+
+            <button type="submit" name="button">Confirm</button>
+        </form>
+</div>
+</div>
+
+<%- include partials/footer %>

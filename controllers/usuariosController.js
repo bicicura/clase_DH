@@ -41,4 +41,79 @@ module.exports = {
     })
 },
 
+    logUser: function (req, res) {
+    res.render ('login', {tipo: "log"});
+},
+    confirmUser: function (req,res) {
+        moduloLogin.validar(req.body.email, req.body.password)
+        .then(resultado => {
+            if (resultado == undefined) {
+                res.redirect('/users/reviews');
+            } else{
+                res.redirect('/users/reviews/' + resultado.id)
+            }
+        })
+    },
+
+    getReviews: function (req,res) {
+        DB.Review.findAll({
+            where: [
+                {user_id: req.params.id}],
+            include: ["usuario"]
+        })
+        .then(resultado =>
+            res.render('reviews', {resultado: resultado}))
+    },
+
+    showEdit: function (req, res) {
+        DB.Review.findOne({
+            where: [
+                {id: req.params.id}
+            ]
+        })
+        .then(resultado => {
+            res.render('editReview', {resultado: resultado})
+        })
+    },
+
+    confirmEdit: function (req, res) {
+        moduloLogin.validar(req.body.email, req.body.password)
+        .then(resultado => {
+            if (resultado != undefined) {
+        DB.Review.update({
+          review: req.body.review,
+          rating: req.body.rating
+        }, {
+            where: {
+                id: req.params.id,
+            }
+        })
+        .then(() => {
+            res.redirect('/users/reviews/' + resultado.id);
+        })  
+        } else {
+            return res.redirect('users/reviews/edit' + req.params.id);
+        }
+        });
+    },
+
+    deleteReview: function (req, res) {
+        res.render('login', {tipo: "delete", deleteId: req.params.id})
+    },
+
+    confirmDelete: function (req,res) {
+        moduloLogin.validar(req.body.email, req.body.password)
+        .then (resultado => {
+            if (resultado != null) {
+                DB.Review.destroy ({
+                    where: {
+                        id: req.params.id,
+                    }
+                })
+                res.redirect('/users/reviews');
+            }else{
+                res.redirect('users/reviews/delete' + req.params.id);
+            }
+        })
+    },
 }

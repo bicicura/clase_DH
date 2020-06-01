@@ -1,0 +1,40 @@
+<%- include partials/header %>
+
+<div>
+    <div>
+        <form id="formlogin" method="POST" action="/usuarios/reviews/edit<%= resultado.id %>">
+        <h1 style="color: white;">Edit Review</h1>
+
+        <div>
+            <div>
+                <span></span>
+                <input type="text" name="email" id="email" placeholder="email...">
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <span></span>
+                <input type="password" name="password" id="pass" placeholder="password...">
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <label for="review">Review</label>
+                <textarea class="" value="" cols="50" rows="3" name="review" id="text_review" ><%= 
+                resultado.review %></textarea>
+            </div>
+        </div>
+        <label for="review">Puntaje</label>
+        <input type="range" name="rating" id="points" class="uk-range" min="0" max="10"
+        onchange="updateValue(this.value)">
+        <p id="valorRange" style="color: white;"> <%= resultado.rating%> </p>
+    </div>
+
+    <button type="submit" name="button">Confirm</button>
+    </form>
+    </div>
+</div>
+
+<%- include partials/footer %>
