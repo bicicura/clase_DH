@@ -44,9 +44,9 @@ module.exports = {
         moduloLogin.validar(req.body.email, req.body.password)
         .then(resultado => {
             if (resultado == undefined) {
-                res.redirect('/users/reviews');
+                res.redirect('/usuarios/reviews');
             } else{
-                res.redirect('/users/reviews/' + resultado.id)
+                res.redirect('/usuarios/reviews/' + resultado.id)
             }
         })
     },
@@ -85,10 +85,10 @@ module.exports = {
             }
         })
         .then(() => {
-            res.redirect('/users/reviews/' + resultado.id);
+            res.redirect('/usuarios/reviews/' + resultado.id);
         })  
         } else {
-            return res.redirect('users/reviews/edit' + req.params.id);
+            return res.redirect('usuarios/reviews/edit' + req.params.id);
         }
         });
     },
@@ -106,9 +106,9 @@ module.exports = {
                         id: req.params.id,
                     }
                 })
-                res.redirect('/users/reviews');
+                res.redirect('/usuarios/reviews');
             }else{
-                res.redirect('users/reviews/delete' + req.params.id);
+                res.redirect('usuarios/reviews/delete' + req.params.id);
             }
         })
     },

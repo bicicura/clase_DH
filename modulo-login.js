@@ -24,7 +24,7 @@ let moduloLogin = {
         })
     },
 
-    validar: function (email, pass) {
+    validar: function (email, password) {
         return DB.Usuarios.findOne({
             where:{
                 email:email,
@@ -32,7 +32,7 @@ let moduloLogin = {
         })
         .then(results=>{
             if (results != null) {
-                let chequeo = bcrypt.compareSync(pass, results.password)
+                let chequeo = bcrypt.compareSync(password, results.password)
                 if (chequeo) {
                     return results;
                 }else{
