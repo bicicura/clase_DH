@@ -1,6 +1,7 @@
 const DB = require('../database/models/');
 const op = DB.Sequelize.Op;
 const moduloLogin = require('../modulo-login');
+const bcrypt = require('bcryptjs');
 
 module.exports = {
     index: (req, res) => {
@@ -10,6 +11,7 @@ module.exports = {
     create: (req, res) => {res.render('registerForm')},
 
     store: (req, res) => {
+        req.body.password = bcrypt.hashSync(req.body.password,10)
         DB.Usuarios
             .create(req.body)
             .then(SavedUser => {return res.send('Felicitaciones ' + req.body.name + ' te has registrado exitosamente!'); })
@@ -40,6 +42,7 @@ module.exports = {
     logUser: function (req, res) {
     res.render ('login', {tipo: "log"});
 },
+
     confirmUser: function (req,res) {
         moduloLogin.validar(req.body.email, req.body.password)
         .then(resultado => {
@@ -52,7 +55,7 @@ module.exports = {
     },
 
     getReviews: function (req,res) {
-        DB.Review.findAll({
+        DB.Reviews.findAll({
             where: [
                 {user_id: req.params.id}],
             include: ["usuario"]
@@ -62,7 +65,7 @@ module.exports = {
     },
 
     showEdit: function (req, res) {
-        DB.Review.findOne({
+        DB.Reviews.findOne({
             where: [
                 {id: req.params.id}
             ]
@@ -76,7 +79,7 @@ module.exports = {
         moduloLogin.validar(req.body.email, req.body.password)
         .then(resultado => {
             if (resultado != undefined) {
-        DB.Review.update({
+        DB.Reviews.update({
           review: req.body.review,
           rating: req.body.rating
         }, {
@@ -101,7 +104,7 @@ module.exports = {
         moduloLogin.validar(req.body.email, req.body.password)
         .then (resultado => {
             if (resultado != null) {
-                DB.Review.destroy ({
+                DB.Reviews.destroy ({
                     where: {
                         id: req.params.id,
                     }
