@@ -5,12 +5,12 @@
     <% if (tipo == "delete") { %>
         <form id="formlogin" method="POST" 
         action="/usuarios/reviews/delete/<%= deleteId %>">
-            <h1 style="color:white">Delete</h1>
+            <h1 style="color:black">Borrar reseña</h1>
             <p>Confirma tus datos de usuario para borrar la reseña seleccionada</p>
                 <div>
                     <div>
                         <span></span>
-                        <input type="text" name="email" id="email" placeholder="email...">
+                        <input type="email" name="email" id="email" placeholder="email...">
                     </div>
                 </div>
 
@@ -25,12 +25,12 @@
         </form>
     <% } else { %> 
         <form id="formlogin" method="POST" action="/usuarios/reviews">
-            <h1 style="color:white">Login!</h1>
+            <h1 style="color:black">Login!</h1>
 
             <div>
                 <div>
                     <span></span>
-                    <input type="text" name="email" id="email" placeholder="email...">
+                    <input type="email" name="email" id="email" placeholder="email...">
                 </div>
             </div>
 

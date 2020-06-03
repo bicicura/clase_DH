@@ -28,17 +28,19 @@ font-weight: bold;
 
 .sinopsis {
 width: 95%;
-background-color: rgba(255, 230, 235, 0.8);
+background-color: #ffe6eb;
 padding: 1%;
 border-radius: 28px 28px 28px 28px;;
 }
 
   .img1 {
 width: 420px;
+margin: auto;
 }
 
 .formContainer {
-  text-align: center;
+  margin: auto;
+  width: 50%;
 }
 
 .reviewFormDiv {
@@ -49,4 +51,18 @@ width: 420px;
   border-radius: 5px 5px 5px 5px;
   background-color: #ffe6eb;
   width: 600px;
+}
+
+.reseñasCont {
+  width: 97%;
+  background-color: #dd91a0;
+  border-width: 4px 4px;
+  border-radius: 40px;
+  margin-bottom: 40px;
+}
+
+.reseñas {
+  list-style-type: none;
+  text-align: center;
+  font-size: 30px;
 }

@@ -5,7 +5,7 @@
 <div>
     <div>
         <form id="formlogin" method="POST" action="/usuarios/reviews/edit/<%= resultado.id %>">
-        <h1 style="color: white;">Edit Review</h1>
+        <h1 style="color: black;">Edit Review</h1>
 
         <div>
             <div>
@@ -31,7 +31,7 @@
         <label for="review">Puntaje</label>
         <input type="range" name="rating" id="points" class="uk-range" min="0" max="10"
         onchange="updateValue(this.value)">
-        <p id="valorRange" style="color: white;"> <%= resultado.rating%> </p>
+        <p id="valorRange" style="color: black;"> <%= resultado.rating%> </p>
     </div>
 
     <button type="submit" name="button">Confirm</button>

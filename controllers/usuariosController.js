@@ -14,7 +14,7 @@ module.exports = {
         req.body.password = bcrypt.hashSync(req.body.password,10)
         DB.Usuarios
             .create(req.body)
-            .then(SavedUser => {return res.send('Felicitaciones ' + req.body.name + ' te has registrado exitosamente!'); })
+            .then(SavedUser => {res.redirect('/home'); })
             .catch(error => {res.send(error);
             })
     },
