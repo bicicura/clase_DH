@@ -53,9 +53,15 @@
 </div>
 
   <br>
-<!-- <div>
-EN ESTE DIV VA UN FOR PARA QUE SE MUESTREN LAS REVIEWS HASTA EL MOMENTO
-</div> -->
+<div>
+  <% if(resultado.length != 0) { %>
+    <% for (let i=0; i < resultado.length; i++) { %>
+        <ul><li><%= resultado[i].text_review %></li></ul>
+        <% } %>
+    <% } else { %>
+    <p>No se encontro ninguna resenia</p>
+   <% } %>
+</div>
 
   <br>
 

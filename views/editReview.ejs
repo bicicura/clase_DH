@@ -1,8 +1,10 @@
 <%- include partials/header %>
 
+<title>Editar Resenia</title>
+
 <div>
     <div>
-        <form id="formlogin" method="POST" action="/usuarios/reviews/edit<%= resultado.id %>">
+        <form id="formlogin" method="POST" action="/usuarios/reviews/edit/<%= resultado.id %>">
         <h1 style="color: white;">Edit Review</h1>
 
         <div>
@@ -21,9 +23,9 @@
 
         <div>
             <div>
-                <label for="review">Review</label>
-                <textarea class="" value="" cols="50" rows="3" name="review" id="text_review" ><%= 
-                resultado.review %></textarea>
+                <label>Review</label>
+                <textarea class="" value="" cols="50" rows="3" name="text_review" id="text_review" ><%= 
+                resultado.text_review %></textarea>
             </div>
         </div>
         <label for="review">Puntaje</label>

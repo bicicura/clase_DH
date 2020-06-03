@@ -80,7 +80,7 @@ module.exports = {
         .then(resultado => {
             if (resultado != undefined) {
         DB.Reviews.update({
-          review: req.body.review,
+          text_review: req.body.text_review,
           rating: req.body.rating
         }, {
             where: {
@@ -91,7 +91,7 @@ module.exports = {
             res.redirect('/usuarios/reviews/' + resultado.id);
         })  
         } else {
-            return res.redirect('usuarios/reviews/edit' + req.params.id);
+            return res.redirect('usuarios/reviews/edit/' + req.params.id); //PREGUNTAR Q ONDA ESTA LINEA D CODIGO
         }
         });
     },
@@ -111,7 +111,7 @@ module.exports = {
                 })
                 res.redirect('/usuarios/reviews');
             }else{
-                res.redirect('usuarios/reviews/delete' + req.params.id);
+                res.redirect('usuarios/reviews/delete/' + req.params.id);
             }
         })
     },
