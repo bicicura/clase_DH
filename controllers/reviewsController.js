@@ -1,4 +1,5 @@
 const DB = require('../database/models');
+const moduloLogin = require('../modulo-login');
 
 module.exports = {
     index: (req, res) => {
@@ -14,10 +15,15 @@ module.exports = {
     create: (req, res) => {res.render('detail')},
 
     store: (req, res) => {
-        DB.Reviews
+        moduloLogin.validar(req.body.email, req.body.password)
+        .then (resultado => {
+            if (resultado != null) {
+            DB.Reviews
             .create(req.body)
-            .then(SavedReview => {return res.send('Felicitaciones hemos registrado exitosamente tu reseña'); })
+            .then(SavedReview => {return res.redirect('back');}) //preguntar como mandar al fondo de la vista
             .catch(error => {res.send(error);
             })
+        }else res.redirect('/usuarios/reviews');}) 
+
     },    
 }
