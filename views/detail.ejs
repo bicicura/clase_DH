@@ -9,8 +9,8 @@
     </ul>
     <br>
 
-<div class="formContainer">
-  <div class="reviewFormDiv">
+<div class="AfueraReview">
+  <div class="AdentroReview">
     <form action="/reviews/store" method="post">
       <input type="hidden" name="serie_id" id="serie_id">
       <fieldset class="uk-fieldset">
@@ -37,7 +37,7 @@
     
         <div class="uk-margin">
             <select class="uk-select" name="rate">
-                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+              <option value="" disabled selected>Puntaje...</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
             </select>
         </div>
     
@@ -59,7 +59,7 @@
         <ul class="reseñas"><div class="reseñasCont"><li><%= resultado[i].text_review %></li></div></ul>
         <% } %>
     <% } else { %>
-      <span class="uk-badge">No hay reseñas registradas, la tuya puede ser la primera!</span>
+      <div class="Afuera"><div class="Adentro"><span class="uk-badge">No hay reseñas registradas, la tuya puede ser la primera!</span></div></div>
    <% } %>
 </div>
 
