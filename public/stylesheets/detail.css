@@ -22,6 +22,12 @@ color: black
   width:100%
 }
 
+.reseñasCont {
+  background-color: #defcfc;
+  padding: 1rem;
+  border-radius: 15px 15px 15px 15px; 
+}
+
 .Adentro {
     display: table;
     margin: 0 auto;

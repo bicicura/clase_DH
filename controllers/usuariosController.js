@@ -47,9 +47,9 @@ module.exports = {
         moduloLogin.validar(req.body.email, req.body.password)
         .then(resultado => {
             if (resultado == undefined) {
-                res.redirect('/usuarios/reviews');
+                return res.redirect('/usuarios/reviews/' + '?error=true');
             } else{
-                res.redirect('/usuarios/reviews/' + resultado.id)
+                res.redirect('/usuarios/reviews/' + resultado.id) // ES ACA BRODI 
             }
         })
     },
@@ -91,7 +91,7 @@ module.exports = {
             res.redirect('/usuarios/reviews/' + resultado.id);
         })  
         } else {
-            return res.redirect('usuarios/reviews/edit/' + req.params.id); //PREGUNTAR Q ONDA ESTA LINEA D CODIGO
+            return res.redirect('/usuarios/reviews/edit/' + req.params.id + '?error=true');
         }
         });
     },
@@ -111,7 +111,7 @@ module.exports = {
                 })
                 res.redirect('/usuarios/reviews');
             }else{
-                res.redirect('usuarios/reviews/delete/' + req.params.id);
+                res.redirect('' + req.params.id + '/?error=true' );
             }
         })
     },
