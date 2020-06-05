@@ -10,13 +10,12 @@
                <ul>
                 <div>
                     <div>
-                        Score: <%= resultado[i].rating %></div>
+                        Puntaje: <%= resultado[i].rate %></div>
                         <div>
                             <h4><%= resultado[i].text_review %></h4>
                         </div>
                         <div>
                             <a href="/usuarios/reviews/edit/<%= resultado[i].id %>">Edit</a>
-                            <a href="/detalle?idDeSerie=<%= resultado[i].serie_id%> "> Go to movie</a>
                             <a href="/usuarios/reviews/delete/<%= resultado[i].id %>">Delete</a>
                         </div>
                 </div>

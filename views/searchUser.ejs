@@ -1,9 +1,14 @@
 <%- include partials/header %>
+<link rel="stylesheet" href="/stylesheets/detail.css">
 
-    <form action="/usuarios/search" method="GET" class="formUsuarios"> 
-        <label for="user">BUSCADOR DE USUARIO</label>
-        <input type="user" id="searchUser" name="searchUser">
-        <button type="submit">Enviar!</button>
-    </form>
+    <div class="Afuera">
+        <div class="Adentro">
+        <form action="/usuarios/search" method="GET" class="formUsuarios"> 
+            <label for="user">Buscador de Usuario: </label>
+            <input type="user" id="searchUser" name="searchUser">
+            <button type="submit">Enviar!</button>
+        </form>
+    </div>
+</div>
 
 <%- include partials/footer %>

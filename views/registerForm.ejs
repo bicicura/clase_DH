@@ -1,15 +1,22 @@
 <%- include partials/header %>
 
+<link rel="stylesheet" href="/stylesheets/detail.css">
+<br>
+<div class="Afuera"><div class="Adentro reseñasCont"> 
     <form action="/usuarios/store" method="post">
+        <h3>Ingresa tus datos!</h3>
+        <br>
         <label>Nombre y Apellido:</label> <input type="text" name="name">
-        <br>
+        <br><br>
         <label>Fecha de Nacimiento:</label> <input type="date" name="birth_date">
-        <br>
+        <br><br>
         <label>Email:</label> <input type="email" name="email">
-        <br>
+        <br><br>
         <label>Contraseña:</label> <input type="password" name="password">
-        <br>
+        <br><br>
         <button type="submit">Registrarse!</button>
     </form>
+</div></div>
+ <br>
     
 <%- include partials/footer %>
