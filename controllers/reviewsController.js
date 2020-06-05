@@ -17,13 +17,19 @@ module.exports = {
     store: (req, res) => {
         moduloLogin.validar(req.body.email, req.body.password)
         .then (resultado => {
-            if (resultado != null) {
+            if (resultado != null) { 
             DB.Reviews
-            .create(req.body)
+            .create(
+                {serie_id: req.body.serie_id,
+                user_id: resultado.id,
+                text_review: req.body.text_review,
+                rate: req.body.rate
+            }
+            )
             .then(SavedReview => {return res.redirect('back');}) //preguntar como mandar al fondo de la vista
             .catch(error => {res.send(error);
             })
-        }else res.redirect('/usuarios/reviews');}) 
+        }else res.redirect('back');}) 
 
     },    
 }

@@ -1,11 +1,13 @@
 <%- include partials/header %>
 
-<title>Editar Resenia</title>
+<title>Editar Reseña</title>
 
-<div>
-    <div>
+<link rel="stylesheet" href="/stylesheets/detail.css"/>
+
+<div class="Afuera">
+    <div class="Adentro">
         <form id="formlogin" method="POST" action="/usuarios/reviews/edit/<%= resultado.id %>">
-        <h1 style="color: black;">Edit Review</h1>
+        <h1 style="color: black;">Editar Reseña</h1>
 
         <div>
             <div>
@@ -23,15 +25,15 @@
 
         <div>
             <div>
-                <label>Review</label>
+                <label>Tu reseña</label>
                 <textarea class="" value="" cols="50" rows="3" name="text_review" id="text_review" ><%= 
                 resultado.text_review %></textarea>
             </div>
-        </div>
-        <label for="review">Puntaje</label>
-        <input type="range" name="rating" id="points" class="uk-range" min="0" max="10"
-        onchange="updateValue(this.value)">
-        <p id="valorRange" style="color: black;"> <%= resultado.rating%> </p>
+
+    <div class="uk-margin">
+        <select class="uk-select" name="rate">
+          <option value="" disabled selected>Puntaje...</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
     </div>
 
     <button type="submit" name="button">Confirm</button>

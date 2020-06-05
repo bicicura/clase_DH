@@ -74,6 +74,14 @@
 
   <br>
 
+  <script>
+    let query = new URLSearchParams(location.search)
+    let error = query.get('error')
+    if (error == "true") {
+        alert('Error: Usuario o Contraseña incorrecta')
+    }
+</script>
+
 <%- include partials/footer %>
 
 <script type="text/javascript" src="/javascripts/pag5.js">
