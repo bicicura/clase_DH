@@ -52,7 +52,15 @@
 <div class="reseñasDiv">
   <% if(resultado.length != 0) { %>
     <% for (let i=0; i < resultado.length; i++) { %>
-        <ul class="reseñas"><div class="Adentro"><div class="reseñasCont"><li><%= resultado[i].text_review %></li><li><%= resultado[i].rate %></li></div></div></ul>
+        <ul class="reseñas">
+          <div class="reseñasCont">
+            <li class="nombre"><%= resultado[i].usuario.name%></li>
+            <li><%= resultado[i].rate %></li>
+          </div>
+          <div>          
+            <li><%= resultado[i].text_review %></li>
+        </div>
+        </ul>
         <% } %>
     <% } else { %>
       <div class="Afuera"><div class="Adentro"><span class="uk-badge">No hay reseñas registradas, la tuya puede ser la primera!</span></div></div>

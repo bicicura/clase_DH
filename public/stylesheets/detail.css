@@ -22,12 +22,6 @@ color: black
   width:100%
 }
 
-.reseñasCont {
-  background-color: #defcfc;
-  padding: 1rem;
-  border-radius: 15px 15px 15px 15px; 
-}
-
 .Adentro {
     display: table;
     margin: 0 auto;
@@ -35,7 +29,9 @@ color: black
 }
 
 .AfueraReview {
-  width:100%
+  width:100%;
+  display: flex;
+  flex-wrap: wrap
 }
 
 .AdentroReview {
@@ -71,8 +67,25 @@ margin: auto;
   width: 50%;
 }
 
-.reseñas {
-  list-style-type: none;
-  text-align: center;
-  font-size: 30px;
+.reseñasDiv{
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+.reseñas {
+  padding: 2rem;
+  background-color: rgb(112, 219, 158); 
+  border-radius: 70px 70px 70px 70px; 
+  width: fit-content;
+}
+
+.reseñasCont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
