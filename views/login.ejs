@@ -4,11 +4,11 @@
 
 <br>
 <div class="Afuera">
-<div class="Adentro reseñasCont">
+<div class="Adentro loginForm">
     <% if (tipo == "delete") { %>
         <form id="formlogin" method="POST" 
         action="/usuarios/reviews/delete/<%= deleteId %>">
-            <h2 style="color:black">Borrar reseña</h2>
+            <h2 style="color: #2C3536;">Borrar reseña</h2>
             <p>Confirma tus datos para borrar la reseña seleccionada</p>
                 <div>
                     <div>
@@ -29,7 +29,7 @@
         </form>
     <% } else { %> 
         <form id="formlogin" method="POST" action="/usuarios/reviews">
-            <h3 style="color:black">Ingresa tus datos!</h1>
+            <h3 style="color: #2C3536;">Ingresa tus datos!</h1>
 
             <div>
                 <div>

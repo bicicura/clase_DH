@@ -49,7 +49,7 @@ module.exports = {
             if (resultado == undefined) {
                 return res.redirect('/usuarios/reviews/' + '?error=true');
             } else{
-                res.redirect('/usuarios/reviews/' + resultado.id) // ES ACA BRODI 
+                res.redirect('/usuarios/reviews/' + resultado.id)
             }
         })
     },
