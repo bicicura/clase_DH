@@ -1,11 +1,13 @@
 body {
   background-color: #cbf1f5;
+  color: #2C3536;
 }
 
 ul {
 list-style-type: none;
 text-align: center;
 font-size: 30px;
+color: #2C3536;
   }
 
 .contenedor {

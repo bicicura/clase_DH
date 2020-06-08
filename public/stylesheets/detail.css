@@ -1,7 +1,7 @@
 body {
   background-color: #cbf1f5;
   font-family: helvetica;
-  color: black;
+  color: #2C3536;
 }
 
 .titulo {
@@ -15,7 +15,7 @@ margin-top: 25px;
 text-align: center;
 font-size: 30px;
 font-weight: bold;
-color: black
+color: #2C3536;
 }
 
 .Afuera {
