@@ -10,7 +10,7 @@ window.addEventListener ('load', function() {
     console.log(informacion)
     var id = informacion.id
   	for (var genero of informacion.genres) {
-			list.innerHTML += `<div class="contenedor"><li><a href="/seriesXgenre?idDeGenero=${genero.id}&nombreDeGenero=${genero.name}">` + genero.name + `</a></li></div>`;
+			list.innerHTML += `<div class="contenedor Adentro"><li><a href="/seriesXgenre?idDeGenero=${genero.id}&nombreDeGenero=${genero.name}">` + genero.name + `</a></li></div>`;
 		}
 	})
 	.catch(function (error) {
