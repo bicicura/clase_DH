@@ -3,9 +3,9 @@
 <title>Editar Reseña</title>
 
 <link rel="stylesheet" href="/stylesheets/detail.css"/>
-
+<br>
 <div class="Afuera">
-    <div class="Adentro">
+    <div class="Adentro Editar">
         <form id="formlogin" method="POST" action="/usuarios/reviews/edit/<%= resultado.id %>">
         <h1 style="color: black;">Editar Reseña</h1>
 
@@ -22,10 +22,9 @@
                 <input type="password" name="password" id="pass" placeholder="password...">
             </div>
         </div>
-
+    <br>
         <div>
             <div>
-                <label>Tu reseña</label>
                 <textarea class="" value="" cols="50" rows="3" name="text_review" id="text_review" ><%= 
                 resultado.text_review %></textarea>
             </div>
@@ -40,6 +39,7 @@
     </form>
     </div>
 </div>
+<br>
 
 <script>
     let query = new URLSearchParams(location.search)

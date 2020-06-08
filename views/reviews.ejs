@@ -1,22 +1,26 @@
 <%- include partials/header %>
 
-<div>
-    <div>
+<link rel="stylesheet" href="/stylesheets/detail.css"/>
+
+<br>
+
+<div class="Afuera">
+    <div class="Adentro Editar">
         <% if(resultado.length == 0) { %> 
             <h1>No haz hecho una reseña, te sugerimos a que pienses ahora tu primera!</h1>
         <% } else { %>
-            <h1 class=""> <%= resultado[0].usuario.name %>'s reviews</h1>
+            <h2 class=""> Reseñas de <%= resultado[0].usuario.name %></h2>
             <% for(let i = 0; i < resultado.length; i++) { %>
                <ul>
-                <div>
+                <div class="listaR">
                     <div>
                         Puntaje: <%= resultado[i].rate %></div>
                         <div>
                             <h4><%= resultado[i].text_review %></h4>
                         </div>
                         <div>
-                            <a href="/usuarios/reviews/edit/<%= resultado[i].id %>">Edit</a>
-                            <a href="/usuarios/reviews/delete/<%= resultado[i].id %>">Delete</a>
+                            <a href="/usuarios/reviews/edit/<%= resultado[i].id %>">Editar</a>
+                            <a href="/usuarios/reviews/delete/<%= resultado[i].id %>">Borrar</a>
                         </div>
                 </div>
                </ul>
@@ -24,5 +28,7 @@
             <% } %>
         </div>
 </div>
+
+<br>
 
 <%- include partials/footer %>

@@ -61,7 +61,7 @@ padding: 1%;
 border-radius: 28px 28px 28px 28px;;
 }
 
-  .img1 {
+.img1 {
 width: 420px;
 margin: auto;
 }
@@ -75,4 +75,16 @@ margin: auto;
   list-style-type: none;
   text-align: center;
   font-size: 30px;
+}
+
+.Editar {
+  background-color: #defcfc;
+  padding: 1rem;
+  border-radius: 15px 15px 15px 15px; 
+}
+
+.listaR {
+  background-color: #cbf1f5;
+  padding: 1rem;
+  border-radius: 15px 15px 15px 15px; 
 }
