@@ -23,9 +23,9 @@ color: black
 }
 
 .reseñasCont {
-  background-color: #defcfc;
-  padding: 1rem;
-  border-radius: 15px 15px 15px 15px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .Adentro {
@@ -72,9 +72,10 @@ margin: auto;
 }
 
 .reseñas {
-  list-style-type: none;
-  text-align: center;
-  font-size: 30px;
+  background-color: #defcfc;
+  padding: 2rem;
+  border-radius: 70px 70px 70px 70px; 
+  width: fit-content;
 }
 
 .Editar {
@@ -87,4 +88,17 @@ margin: auto;
   background-color: #cbf1f5;
   padding: 1rem;
   border-radius: 15px 15px 15px 15px; 
+}
+
+.reseñasDiv{
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nombre{
+  align-items: center;
 }
